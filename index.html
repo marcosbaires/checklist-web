@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <title>Equipo edición y diseño - Checklist web</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  <style type="text/css">
+  	.details-para {display: block;}
+  </style>
+  <!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<!-- Google -->
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#DF0101">
+	<!-- Apple -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="BlitzDesign">
+	<link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+	<!-- MS -->
+	<meta name="msapplication-TileImage" content="assets/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#DF0101">
+	<meta name="application-name" content="BlitzDesign">
+
+<script type="text/javascript">
+        document.getElementById("txt_1").value = getSavedValue("txt_1");    // set the value to this input
+        document.getElementById("txt_2").value = getSavedValue("txt_2");   // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+</head>
+
+<body>
+  <header>
+    <img class="header-icon" alt="Dirección General de Planeamiento Educativo" src="img/dupla.png"/>
+    
+    <h1>Checklist de materiales disciplinares</h1>
+
+    <p class="lead">Recordemos que esta lista de verificación es útil para genera mejores materiales y minimizar el margen de error.</p> 
+    
+    <p class="lead">Hacerlo con ojo crítico y concentración es clave para que el resto de los pasos previos que llevo a esta instancia, no se vea opacado.</p>
+
+    <p class="lead">Si encontrar algun error en este <i>checklist</i> o queres recomendar una modificación no dudes en avisar.</p>
+  </header>
+
+ <input class="title-material" type="text" placeholder="Título del material" type="text" id="txt_1" onkeyup='saveValue(this);'/> 
+
+  <main>
+
+    <form id="checklist" name="checklist">
+    <section id="tapa">
+    <div class="wrapper">
+      	<img src="img/tapa.png">
+    <h2>Tapa</h2>
+        
+
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="avatares"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="avatares1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Chequear avatares de tapa y contratapa</span>
+        	<span class="details">
+          	<span class="details-para">Que sean los mismos y que contrasten con el color de fondo de la propuesta.</span>
+            </span>        
+        </label>
+
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="plaqueta-nes"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="plaqueta-nes1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Revisar plaqueta de Profundización NES</span>
+        	<span class="details">
+        	<span class="details-para">Que la plaqueta de Profundización NES tenga un punto intermedio.</span>
+        	</span>
+        </label>
+
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="plaqueta-ciencias"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="plaqueta-ciencias1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+            <span class="summary">Chequear si la propuesta tiene intervención de ED Ciencias</span>
+            <span class="details">
+            <span class="details-para">En el cronograma del material tiene que estar detallado. En el caso de que sea parte, el logo del programa tiene que aparecer en la tapa y en    la imagen para la web.</span>
+            </span>
+        </label>
+
+      </div>
+      </section>
+
+     <section id="interior">
+    <div class="wrapper">
+
+      	<img src="img/interior.png">
+    <h2>Interior</h2>
+
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="cabezal"/>
+            <span class="checker">PDF</span>
+            </label>
+
+        	<span class="summary">Revisar cabezales</span>
+        	<span class="details">
+        	<span class="details-para">Que este correcto la disciplina, el tiulo y el color. La disciplina tiene que estar con el color superior de la tapa.</span>
+        	</span>
+        </label>
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="pie"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <span class="summary">Chequear funcionamiento de todos los botónes del pie</span>
+            <span class="details">
+            <span class="details-para">Revisar el desplazamiento de páginas, el botón de imprimir y "Volver a vista anterior". Ninguno debe cambiar de color al cliquearlo y estar en todas las páginas.</span>
+            </span>
+        </label> 
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="membrete"/>
+            <span class="checker">PDF</span>
+            </label>
+
+        	<span class="summary">Revisar membrete</span>
+        	<span class="details">
+        	<span class="details-para">Que no aparezca pisado y este plantado en todas las páginas.</span>		
+        	</span>
+        </label>
+
+    </div>
+    </section>
+
+    <section id="metadatos">
+    <div class="wrapper">
+        <img src="img/metadatos.png">
+    <h2>Metadatos</h2>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="titulo"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="titulo1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+            <span class="summary">Revisar titulo del documento</span>
+            <span class="details">
+            <span class="details-para">Tiene que cumplir con la estructira <i>Disciplina. Titulo del documento</i>.</span>
+            </span>
+        </label>
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="autor"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="autor"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+            <span class="summary">Revisar autor del documento</span>
+            <span class="details">
+            <span class="details-para">Tiene que ser <i>Ministerio de Educación e Innovación - GCABA</i>.</span>
+            </span>
+        </label> 
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="palabra-clave"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="palabra-clave1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+            <span class="summary">Chequear palabras clave</span>
+            <span class="details">
+            <span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>      
+            </span>
+        </label>
+        
+    </div>
+    </section>
+
+    <section id="autoridades">
+    <div class="wrapper">
+        <img src="img/autoridades.png">
+    <h2>Autoridades</h2>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ministerio"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ministerio1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Chequear que mencione Ministerio de Educación e Innovación</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>
+        	</span>
+        </label> 
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="intec"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="intec1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Revisar si INTEC participo</span>
+        	<span class="details">
+        	<span class="details-para">En general, en el cronograma esta estipulado si INTEC participó de la propuesta. En el caso de que no este no va.</span>
+        	</span>
+        </label> 
+        	
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="secretarias"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="secretarias1"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Chequear nuevas secretarias...</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>
+        	</span>
+        </label>
+
+    </div>
+    </section>
+
+    <section id="creditos">
+    <div class="wrapper">
+        <img src="img/creditos.png">
+    <h2>Créditos</h2>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo1"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo2"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo3"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo4"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo5"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo6"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo7"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo8"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+        
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo9"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo10"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+
+    </div>
+    </section>
+
+
+    <section id="css-list">
+    <div class="wrapper">
+        <img src="img/interactivo.png">
+    <h2>Interactividad </h2>
+  
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo11"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo12"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+
+        <label class="variable">
+            <label>
+            <input type="checkbox" value="ejemplo13"/>
+            <span class="checker">PDF</span>
+            </label>
+
+            <label class="columnas">
+            <input type="checkbox" value="ejemplo14"/>
+            <span class="checker-epub">ePub</span>
+            </label>
+
+        	<span class="summary">Lorem ipsum dolor sit amet</span>
+        	<span class="details">
+        	<span class="details-para">Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Ut interdum aliquet ligula, eget consectetur magna fringilla nec. Morbi odio sapien, aliquam nec dignissim et, placerat vitae lorem. Integer imperdiet mauris in eleifend venenatis.</span>    		
+        	</span>
+        </label>
+
+      </div>
+      </section>
+
+
+
+      <div id="controls">
+      			<input type="reset" value="⟳" title="Resetear todo el listado"/>
+        <input type="reset" title="Exportar como PDF" onclick="javascript:window.print()" value="Generar PDF" />
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+  	<img src="img/vamos-ba.png">
+  	<p class="secondary">Versión 1.0 | Hecho con ♡ en Buenos Aires. Basado en el checklist de <a href="https://github.com/FriendsOfEpub/eBookDesignChecklist">Friends of ePub</a></p>
+    <p class="secondary">Con la tecnología de <a href="https://github.com/FriendsOfEpub/Blitz">Blitz eBook Framework</a> | <a href="https://github.com/FriendsOfEpub/eBookDesignChecklist/blob/master/LICENSE">Licencia</a></p>
+  </footer>
+  
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/eBookDesignChecklist/sw.js', {scope: '/eBookDesignChecklist/'})
+  }  else if ('applicationCache' in window) {
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', '/eBookDesignChecklist/appcache.html');
+    iframe.setAttribute('style', 'width: 0; height: 0; border: 0');
+    document.querySelector('footer').appendChild(iframe);
+  }
+  </script>
+</body>
+</html>

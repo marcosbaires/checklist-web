@@ -1,0 +1,122 @@
+@page {
+  margin: 1500pt;
+  size: portrait;
+  padding: 0;
+}
+
+html, body {
+  margin-top: 0;
+  padding: 0;
+}
+  
+* {
+  background: none !important;
+  color: #222 !important;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.header-icon,
+.lead,
+.details,
+.js-enabled .summary:after,
+.js-enabled .summary.open:after,
+footer,
+button,
+details,
+#how-to,
+#controls,
+.checker,
+.checker-epub {
+  display: none;
+}
+
+.title-material {
+    -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  margin: 10pt 0 15pt 0pt;
+  padding: 0;
+  font-size: 12pt;
+  width: 71%;
+  display: inline-block;  
+}
+
+h1 {
+  margin: 0;
+  padding-top: 10pt;
+  font-size: 16pt;
+  text-align: left;
+  top: 10pt;
+  right: 0;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  display: inline-block;							
+}
+
+h1:after {
+  content: 'Ministerio de Educación e Innovación - GCABA. Utilizando la tecnología de blitz eBook';
+  font-size: 10pt;
+  display: block;
+  opacity: 0.4;
+  text-align: right;
+}
+
+h2 {
+  font-size: 12pt;
+  text-align: left;
+  margin: 0 0 10pt 0;
+}
+
+h2:before {
+  display: inline-block;
+  margin: 0 2pt 0 -7pt;
+  opacity: 0.2;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+form section {
+  margin: 20pt 0 0 0;
+  padding: 0 10pt;
+  box-sizing: border-box;
+  position: relative;
+  page-break-inside: avoid;
+}
+
+form section:first-child {
+  margin: 0;
+}
+
+img {
+  float: left;
+  padding-right: .5rem;
+  height: 20px;
+  width: 20px;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 25pt 0 0 0;
+}
+  
+label {
+  margin: 10pt 0 0 0;
+  padding-left: 20pt;
+  font-size: 10pt;
+  line-height: 1.2;
+}
+
+[type=checkbox] {
+  visibility: visible;
+  float: left;
+  margin: 5pt;
+  position: relative;
+  z-index: -10;
+  left: 0;
+  opacity: 1;
+  height: 15px
+  width 15px;
+}
